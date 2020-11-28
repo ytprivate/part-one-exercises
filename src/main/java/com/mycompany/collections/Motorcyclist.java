@@ -36,9 +36,5 @@ public class Motorcyclist {
         return currentSum;
     }
 
-    public Motorcyclist sortByPrice() {
-        moto.sort(Comparator.comparing(MotorcyclistEquipment::getPrice));
-        return this;
-    }
 }
 
