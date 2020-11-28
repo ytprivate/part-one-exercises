@@ -5,36 +5,35 @@ import java.util.List;
 
 public class Motorcyclist {
 
-    private final List<MotorcyclistEquipment> moto;
+    private final List<MotorcyclistEquipment> motoEquipment;
 
-    public Motorcyclist(List<MotorcyclistEquipment> moto) {
-        this.moto = moto;
+    public Motorcyclist(List<MotorcyclistEquipment> motoEquipment) {
+        this.motoEquipment = motoEquipment;
     }
 
 
     public List<MotorcyclistEquipment> getMotorcyclistEquipment() {
-        List<MotorcyclistEquipment> mte = this.moto;
-        List<MotorcyclistEquipment> moto = new ArrayList<>();
+        List<MotorcyclistEquipment> mte = this.motoEquipment;
+        List<MotorcyclistEquipment> motoEquipment = new ArrayList<>();
         for (MotorcyclistEquipment me : mte) {
             if (me != null) {
-                moto.add(me);
+                motoEquipment.add(me);
             }
         }
-        return moto;
+        return motoEquipment;
     }
 
     public Motorcyclist sortByWeight() {
-        moto.sort(Comparator.comparing(MotorcyclistEquipment::getWeight));
+        motoEquipment.sort(Comparator.comparing(MotorcyclistEquipment::getWeight));
         return this;
     }
 
     public double getSum() {
         double currentSum = 0.0;
-        for (MotorcyclistEquipment me : moto) {
+        for (MotorcyclistEquipment me : motoEquipment) {
             currentSum += me.getPrice();
         }
         return currentSum;
     }
-
 }
 
