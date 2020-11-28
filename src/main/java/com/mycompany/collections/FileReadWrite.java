@@ -1,4 +1,4 @@
-package com.mycompany.collections;
+package main.java.learn.collections;
 
 import java.io.*;
 import java.util.*;
@@ -10,7 +10,7 @@ public class FileReadWrite {
 
         try {
             Scanner sc = new Scanner(new File(
-                    "src/main/java/com/mycompany/collections/text.txt"));
+                    "./src/main/java/collections/text.txt"));
             while (sc.hasNext()) {
                 text.add(sc.nextLine());
             }
@@ -23,7 +23,7 @@ public class FileReadWrite {
         System.out.println(text);
 
         try {
-            File file = new File("src/main/java/com/mycompany/collections/writefile.txt");
+            File file = new File("./src/main/java/collections/writefile.txt");
             FileWriter writer = new FileWriter(file);
             writer.write(String.valueOf(text));
             writer.flush();

@@ -1,5 +1,3 @@
-package com.mycompany.collections;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -12,6 +10,7 @@ public class Motorcyclist {
     public Motorcyclist(List<MotorcyclistEquipment> moto) {
         this.moto = moto;
     }
+
 
     public List<MotorcyclistEquipment> getMotorcyclistEquipment() {
         List<MotorcyclistEquipment> mte = this.moto;
@@ -40,28 +39,6 @@ public class Motorcyclist {
     public Motorcyclist sortByPrice() {
         moto.sort(Comparator.comparing(MotorcyclistEquipment::getPrice));
         return this;
-    }
-
-    public static double setMinPrice() {
-        double min = 100.0;
-        return min;
-    }
-
-    public static double setMaxPrice() {
-        double max = 200.0;
-        return max;
-    }
-
-    public Object getRangeOfPrices() {
-        StringBuilder rangeOfPrices = new StringBuilder();
-        Iterator<MotorcyclistEquipment> iter = moto.iterator();
-        while (iter.hasNext()) {
-            MotorcyclistEquipment me = iter.next();
-            if (me.getPrice() >= setMinPrice() && me.getPrice() <= setMaxPrice()) {
-                rangeOfPrices.append(me);
-            }
-        }
-        return rangeOfPrices.toString();
     }
 }
 
