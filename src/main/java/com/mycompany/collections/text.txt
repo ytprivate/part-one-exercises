@@ -1,5 +1,0 @@
-Привет, мир!
-Hello,
-world.
-And again,
-hello, world!!
