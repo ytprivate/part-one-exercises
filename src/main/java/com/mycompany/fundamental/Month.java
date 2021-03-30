@@ -44,18 +44,17 @@ public class Month {
                     break;
                 case 12:
                     System.out.println("Декабрь");
-                   sc.close();
+                    sc.close();
             }
             else {
                 System.out.println("ВЫ не ввели число!");
-                 sc.close();
+                sc.close();
             }
-
         } else
             System.out.println("Это не число!");
-            sc.close();
-        }
+        sc.close();
     }
+}
 
 
 
