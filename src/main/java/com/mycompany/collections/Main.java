@@ -1,7 +1,7 @@
+package com.mycompany.collections;
+
 import javax.swing.*;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
 
 public class Main {
@@ -27,25 +27,20 @@ public class Main {
         System.out.println("Экипировка отсортирована по цене: " + "\n" +
                 motorcyclistEquipment.sortByPrice().getMotorcyclistEquipment());
 
-String minPrice = JOptionPane.showInputDialog(null, "Введите минмальную цену диапазона ");
-String maxPrice = JOptionPane.showInputDialog(null, "Введите максимальную цену диапазона ");
+        String minPrice = JOptionPane.showInputDialog(null, "Введите минмальную цену диапазона ");
+        String maxPrice = JOptionPane.showInputDialog(null, "Введите максимальную цену диапазона ");
         double min = (Double.parseDouble(minPrice));
         double max = (Double.parseDouble(maxPrice));
 
-        motoEquipment.sort(Comparator.comparingDouble(MotorcyclistEquipment::getPrice));
         StringBuilder rangeOfPrices = new StringBuilder();
-        Iterator<MotorcyclistEquipment> iter = motoEquipment.iterator();
-        while (iter.hasNext()) {
-            MotorcyclistEquipment motoEquipment = iter.next();
-            if (motoEquipment.getPrice() >= min && motoEquipment.getPrice() <= max) {
-                rangeOfPrices.append(motoEquipment);
+        for (MotorcyclistEquipment motoEquip : motoEquipment) {
+            if (motoEquip.getPrice() >= min && motoEquip.getPrice() <= max) {
+                rangeOfPrices.append(motoEquip);
             }
         }
         System.out.println("________");
-       System.out.println("Экипировка в диапазоне цен:  min = " + min + " , max = " + max + "\n" +
-               rangeOfPrices.toString());
-
+        System.out.println("Экипировка в диапазоне цен:  min = " + min + " , max = " + max + "\n" + rangeOfPrices.toString());
     }
-    }
+}
 
 
