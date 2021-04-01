@@ -108,12 +108,15 @@ public class Book {
         }
     }
 
+
+>>>>>>> e7d877a58ac320c4df863eb314d72735c7941c43
     public void getBooksListOfAuthors(String authors) {
         if (getBookOfAuthors().contains(authors)) {
             System.out.println(getInfo());
         }
     }
 
+>>>>>>> e7d877a58ac320c4df863eb314d72735c7941c43
     public void getBookListOfPublishingHouse(String publisher) {
         if (getPublishingName().contains(publisher)) {
             System.out.println(getInfo());
