@@ -1,7 +1,9 @@
-import models.MilitaryType;
-import Planes.MilitaryPlane;
-import Planes.PassengerPlane;
-import Planes.Plane;
+package main.java.com.mycompany.aviation;
+
+import main.java.com.mycompany.aviation.models.MilitaryType;
+import main.java.com.mycompany.aviation.planes.MilitaryPlane;
+import main.java.com.mycompany.aviation.planes.PassengerPlane;
+import main.java.com.mycompany.aviation.planes.Plane;
 
 import java.util.Arrays;
 import java.util.List;
@@ -23,7 +25,6 @@ public class Runner {
             new MilitaryPlane("F-22", 1550, 13000, 11000, MilitaryType.FIGHTER),
             new MilitaryPlane("C-130 Hercules", 650, 5000, 110000, MilitaryType.TRANSPORT)
     );
-
 
     public static void main(String[] args) {
         Airport airport = new Airport(planes);
