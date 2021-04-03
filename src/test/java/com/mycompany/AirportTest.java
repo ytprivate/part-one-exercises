@@ -37,7 +37,7 @@ public class AirportTest {
     private static PassengerPlane planeWithMaxPassengerCapacity = new PassengerPlane("Boeing-747", 980, 16100, 70500, 242);
 
     @Test
-    public void getTransportMilitaryPlanes() {
+    public void testGetTransportMilitaryPlanes() {
         Airport airport = new Airport(planes);
         List<MilitaryPlane> transportMilitaryPlanes = airport.getTransportMilitaryPlanes();
         boolean flag = false;
@@ -51,7 +51,7 @@ public class AirportTest {
     }
 
     @Test
-    public void getPassengerPlaneWithMaxCapacity() {
+    public void testGetPassengerPlaneWithMaxCapacity() {
         System.out.println("TEST getPassengerPlaneWithMaxCapacity started!");
         Airport airport = new Airport(planes);
         PassengerPlane expectedPlaneWithMaxPassengersCapacity = airport.getPassengerPlaneWithMaxPassengersCapacity();
@@ -59,12 +59,12 @@ public class AirportTest {
     }
 
     @Test
-    public void hasNextPlaneMaxLoadCapacityIsHigherThanCurrent() {
+    public void testHasNextPlaneMaxLoadCapacityIsHigherThanCurrent() {
         Airport airport = new Airport(planes);
         airport.sortByMaxLoadCapacity();
         List<? extends Plane> planesSortedByMaxLoadCapacity = airport.getPlanes();
 
-        boolean nextPlaneMaxLoadCapacityIsHigherThanCurrent = true;
+        boolean testNextPlaneMaxLoadCapacityIsHigherThanCurrent = true;
         for (int i = 0; i < planesSortedByMaxLoadCapacity.size() - 1; i++) {
             Plane currentPlane = planesSortedByMaxLoadCapacity.get(i);
             Plane nextPlane = planesSortedByMaxLoadCapacity.get(i + 1);
@@ -77,7 +77,7 @@ public class AirportTest {
     }
 
     @Test
-    public void hasAtLeastOneBomberInMilitaryPlanes() {
+    public void testHasAtLeastOneBomberInMilitaryPlanes() {
         Airport airport = new Airport(planes);
         List<MilitaryPlane> bomberMilitaryPlanes = airport.getBomberMilitaryPlanes();
         boolean flag = false;
@@ -92,7 +92,7 @@ public class AirportTest {
     }
 
     @Test
-    public void hasExperimentalPlanesHasClassificationLevelHigherThanUnclassified(){
+    public void testHasExperimentalPlanesHasClassificationLevelHigherThanUnclassified(){
         Airport airport = new Airport(planes);
         List<ExperimentalPlane> experimentalPlanes = airport.getExperimentalPlanes();
         boolean hasUnclassifiedPlanes = false;
