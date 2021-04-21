@@ -1,4 +1,4 @@
-package main.java.com.mycompany.aviation.models;
+package com.mycompany.aviation.models;
 
 public enum MilitaryType {
     FIGHTER, BOMBER, TRANSPORT

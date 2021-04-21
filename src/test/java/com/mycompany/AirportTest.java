@@ -1,15 +1,15 @@
-package test.java.com.mycompany;
+package com.mycompany;
 
-import main.java.com.mycompany.aviation.Airport;
-import main.java.com.mycompany.aviation.planes.ExperimentalPlane;
-import main.java.com.mycompany.aviation.models.ClassificationLevel;
-import main.java.com.mycompany.aviation.models.ExperimentalTypes;
-import main.java.com.mycompany.aviation.models.MilitaryType;
+import com.mycompany.aviation.Airport;
+import com.mycompany.aviation.planes.ExperimentalPlane;
+import com.mycompany.aviation.models.ClassificationLevel;
+import com.mycompany.aviation.models.ExperimentalTypes;
+import com.mycompany.aviation.models.MilitaryType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import main.java.com.mycompany.aviation.planes.MilitaryPlane;
-import main.java.com.mycompany.aviation.planes.PassengerPlane;
-import main.java.com.mycompany.aviation.planes.Plane;
+import com.mycompany.aviation.planes.MilitaryPlane;
+import com.mycompany.aviation.planes.PassengerPlane;
+import com.mycompany.aviation.planes.Plane;
 
 import java.util.Arrays;
 import java.util.List;

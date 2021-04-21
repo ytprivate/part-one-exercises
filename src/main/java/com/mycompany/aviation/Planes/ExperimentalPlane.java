@@ -1,7 +1,7 @@
-package main.java.com.mycompany.aviation.planes;
+package com.mycompany.aviation.planes;
 
-import main.java.com.mycompany.aviation.models.ExperimentalTypes;
-import main.java.com.mycompany.aviation.models.ClassificationLevel;
+import com.mycompany.aviation.models.ExperimentalTypes;
+import com.mycompany.aviation.models.ClassificationLevel;
 
 public class ExperimentalPlane extends Plane {
 

@@ -1,6 +1,6 @@
-package main.java.com.mycompany.aviation.planes;
+package com.mycompany.aviation.planes;
 
-import main.java.com.mycompany.aviation.models.MilitaryType;
+import com.mycompany.aviation.models.MilitaryType;
 
 import java.util.Objects;
 

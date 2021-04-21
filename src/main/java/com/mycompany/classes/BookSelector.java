@@ -1,4 +1,4 @@
-package main.java.com.mycompany.classes;
+package com.mycompany.classes;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -8,7 +8,7 @@ public class BookSelector {
 
     public static void main(String[] args) {
 
-        List<Book> bookList = new ArrayList<Book>();
+        List<Book> bookList = new ArrayList<>();
 
         bookList.add(new Book(111, "Angels & Demons", "Dan Brown", "Atria Books", 2003, 572, 4.69, "Hardcover"));
         bookList.add(new Book(112, "The Lost Symbol", "Dan Brown", "Knopf Doubleday Publishing Group", 2009, 528, 6.79, "Hardcover"));
@@ -31,7 +31,9 @@ public class BookSelector {
         String authors = "ha";
         System.out.println("Книги автора(-ов) - вхождение : " + " \" " + authors + " \"");
         for (Book bookSelect : bookList) {
-            bookSelect.getBooksListOfAuthors(authors);
+            if (bookSelect.getBookOfAuthors().contains(authors)) {
+                System.out.print(bookSelect);
+            }
         }
 
         bookList.sort(Comparator.comparing(Book::getPublishingName));
@@ -39,15 +41,19 @@ public class BookSelector {
         String publisher = "Boo";
         System.out.println("Книги напечатаны издательством - вхождение :" + " \" " + publisher + " \"");
         for (Book bookSelect : bookList) {
-            bookSelect.getBookListOfPublishingHouse(publisher);
+            if (bookSelect.getPublishingName().contains(publisher)) {
+                System.out.print(bookSelect);
+            }
         }
 
         bookList.sort(Comparator.comparing(Book::getPublishingYear));
         System.out.println("--------------");
-        int sinceYear = 2003;
+        int sinceYear = 2011;
         System.out.println("Книги изданы после " + sinceYear + " года включительно :");
         for (Book bookSelect : bookList) {
-            bookSelect.getBookListSinceYear(sinceYear);
+            if (bookSelect.getPublishingYear() >= sinceYear) {
+                System.out.print(bookSelect);
+            }
         }
     }
 }

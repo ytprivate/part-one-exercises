@@ -12,32 +12,21 @@ public class Motorcyclist {
         this.motoEquipment = motoEquipment;
     }
 
-    public List<MotorcyclistEquipment> getMotorcyclistEquipment() {
-        List<MotorcyclistEquipment> mte = this.motoEquipment;
-        List<MotorcyclistEquipment> motoEquipment = new ArrayList<>();
-        for (MotorcyclistEquipment me : mte) {
-            if (me != null) {
-                motoEquipment.add(me);
-            }
-        }
-        return motoEquipment;
-    }
-
-    public Motorcyclist sortByWeight() {
-        motoEquipment.sort(Comparator.comparing(MotorcyclistEquipment::getWeight));
-        return this;
-    }
-
-    public Motorcyclist sortByPrice() {
-        motoEquipment.sort(Comparator.comparing(MotorcyclistEquipment::getPrice));
-        return this;
-    }
-
-    public double getSum() {
-        double currentSum = 0.0;
+    public double getEquipmentCost() {
+        double equipmentCost = 0.0;
         for (MotorcyclistEquipment me : motoEquipment) {
-            currentSum += me.getPrice();
+            equipmentCost += me.getPrice();
         }
-        return currentSum;
+        return equipmentCost;
+    }
+
+    public List<MotorcyclistEquipment> getMotorcyclistEquipmentSortedByPrice() {
+        motoEquipment.sort(Comparator.comparing(MotorcyclistEquipment::getPrice));
+        return this.motoEquipment;
+    }
+
+    public List<MotorcyclistEquipment> getMotorcyclistEquipmentSortedByWeight() {
+        motoEquipment.sort(Comparator.comparing(MotorcyclistEquipment::getWeight));
+        return this.motoEquipment;
     }
 }

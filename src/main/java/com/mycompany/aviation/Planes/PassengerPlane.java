@@ -1,4 +1,4 @@
-package main.java.com.mycompany.aviation.planes;
+package com.mycompany.aviation.planes;
 
 import java.util.Objects;
 

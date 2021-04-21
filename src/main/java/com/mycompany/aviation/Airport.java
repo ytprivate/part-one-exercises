@@ -1,10 +1,10 @@
-package main.java.com.mycompany.aviation;
+package com.mycompany.aviation;
 
-import main.java.com.mycompany.aviation.models.MilitaryType;
-import main.java.com.mycompany.aviation.planes.ExperimentalPlane;
-import main.java.com.mycompany.aviation.planes.MilitaryPlane;
-import main.java.com.mycompany.aviation.planes.PassengerPlane;
-import main.java.com.mycompany.aviation.planes.Plane;
+import com.mycompany.aviation.models.MilitaryType;
+import com.mycompany.aviation.planes.ExperimentalPlane;
+import com.mycompany.aviation.planes.MilitaryPlane;
+import com.mycompany.aviation.planes.PassengerPlane;
+import com.mycompany.aviation.planes.Plane;
 import java.util.*;
 
 public class Airport {

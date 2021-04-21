@@ -1,4 +1,4 @@
-package main.java.com.mycompany.classes;
+package com.mycompany.classes;
 
 import java.util.Objects;
 
@@ -10,8 +10,8 @@ public class Book {
     private final String publishingName;
     private final int publishingYear;
     private final int pageCount;
-    private double price;
     private final String bindingType;
+    private double price;
 
     public Book(int id, String bookName, String bookAuthors, String publishingName, int publishingYear,
                 int pageCount, double price, String bindingType) {
@@ -88,42 +88,5 @@ public class Book {
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getBookName(), bookAuthors, getPublishingName(), getPublishingYear());
-    }
-
-    public String addingInfo() {
-        return ("Id:" + getId() + ", pages:" + getPageCount() + ", price:" + getPrice() + ", binding:" + getBindingType());
-    }
-
-    String getAuthorsInfo() {
-        return (getBookOfAuthors() + " ; " + getBookName() + ", " + getPublishingName() + ", " + getPublishingYear()
-                + ", " + addingInfo());
-    }
-
-    String getPublishingInfo() {
-        return (getPublishingName() + " ; " + getPublishingYear() + ", " + getBookOfAuthors() + ", " + getBookName()
-                + ", " + addingInfo());
-    }
-
-    String getYearInfo() {
-        return (getPublishingYear() + " ; " + getPublishingName() + ", " + getBookOfAuthors() + ", " + getBookName()
-                + ", " + addingInfo());
-    }
-
-    public void getBooksListOfAuthors(String authors) {
-        if (getBookOfAuthors().contains(authors)) {
-            System.out.println(getAuthorsInfo());
-        }
-    }
-
-    public void getBookListOfPublishingHouse(String publisher) {
-        if (getPublishingName().contains(publisher)) {
-            System.out.println(getPublishingInfo());
-        }
-    }
-
-    public void getBookListSinceYear(int sinceYear) {
-        if (getPublishingYear() >= sinceYear) {
-            System.out.println(getYearInfo());
-        }
     }
 }

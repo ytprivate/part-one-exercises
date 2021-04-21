@@ -17,15 +17,14 @@ public class Main {
 
     public static void main(String[] args) {
         Motorcyclist motorcyclist = new Motorcyclist(motoEquipment);
-        Motorcyclist motorcyclistEquipment = new Motorcyclist(motorcyclist.getMotorcyclistEquipment());
         System.out.println("________");
-        System.out.println("Общая стоимость экипировки : " + motorcyclistEquipment.getSum());
+        System.out.println("Общая стоимость экипировки : " + motorcyclist.getEquipmentCost());
         System.out.println("________");
         System.out.println("Экипировка отсортирована по весу: " + "\n" +
-                motorcyclistEquipment.sortByWeight().getMotorcyclistEquipment());
+                motorcyclist.getMotorcyclistEquipmentSortedByWeight());
         System.out.println("________");
         System.out.println("Экипировка отсортирована по цене: " + "\n" +
-                motorcyclistEquipment.sortByPrice().getMotorcyclistEquipment());
+                motorcyclist.getMotorcyclistEquipmentSortedByPrice());
 
         String minPrice = JOptionPane.showInputDialog(null, "Введите минмальную цену диапазона ");
         String maxPrice = JOptionPane.showInputDialog(null, "Введите максимальную цену диапазона ");
@@ -39,7 +38,7 @@ public class Main {
             }
         }
         System.out.println("________");
-        System.out.println("Экипировка в диапазоне цен:  min = " + min + " , max = " + max + "\n" + rangeOfPrices.toString());
+        System.out.println("Экипировка в диапазоне цен:  min = " + min + " , max = " + max + "\n" + rangeOfPrices);
     }
 }
 
