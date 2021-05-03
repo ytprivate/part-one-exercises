@@ -1,6 +1,7 @@
 package com.mycompany.collections;
 
-import java.util.ArrayList;
+import com.mycompany.collections.equipment.MotorcyclistEquipment;
+
 import java.util.Comparator;
 import java.util.List;
 

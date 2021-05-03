@@ -1,18 +1,25 @@
 package com.mycompany.collections;
 
+import com.mycompany.collections.equipment.Footwear;
+import com.mycompany.collections.equipment.MotorcyclistEquipment;
+import com.mycompany.collections.equipment.ProtectionItems;
+import com.mycompany.collections.equipment.StreetGarment;
+import com.mycompany.collections.models.MotorbikeStyle;
+import com.mycompany.collections.models.ProtectionType;
+
 import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     static List<MotorcyclistEquipment> motoEquipment = Arrays.asList(
-            new MotorcyclistEquipment("Jeans Alpinestars Copper Black", 227.6, 1.5),
-            new MotorcyclistEquipment("Gloves Seca Summer Way", 64.2, 0.5),
-            new MotorcyclistEquipment("Helmet HJC RPHA 70 Grandal MC1SF", 412.8, 1.2),
-            new MotorcyclistEquipment("Jacket leather Rebelhorn Rebel Black", 369.3, 4.5),
-            new MotorcyclistEquipment("Boots Forma ADV TOURER", 233.5, 1.2),
-            new MotorcyclistEquipment("Back protection ACERBIS", 81.7, 0.8),
-            new MotorcyclistEquipment("Knee pads ACERBIS GINOCCHIERA GORILLA", 175.1, 0.6)
+            new StreetGarment("Jeans Alpinestars Copper Black", 227.6, 1.5, MotorbikeStyle.STREET),
+            new StreetGarment("Gloves Seca Summer Way", 64.2, 0.5, MotorbikeStyle.STREET),
+            new StreetGarment("Jacket leather Rebelhorn Rebel Black", 369.3, 4.5, MotorbikeStyle.STREET),
+            new Footwear("Boots Forma ADV TOURER", 233.5, 1.2, MotorbikeStyle.STREET),
+            new ProtectionItems("Helmet HJC RPHA 70 Grandal MC1SF", 412.8, 1.2, ProtectionType.HEAD),
+            new ProtectionItems("Back protection ACERBIS", 81.7, 0.8, ProtectionType.TORSO_PROTECTOR),
+            new ProtectionItems("Knee pads ACERBIS GINOCCHIERA GORILLA", 175.1, 0.6, ProtectionType.KNEE)
     );
 
     public static void main(String[] args) {

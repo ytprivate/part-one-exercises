@@ -1,7 +1,8 @@
-package com.mycompany.collections;
+package com.mycompany.collections.option;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 
 public class ReverseStackDigits {
@@ -15,7 +16,7 @@ public class ReverseStackDigits {
             a /= 10;
         }
         System.out.println("Число в ArrayList: " + nums);
-        nums.sort((o2, o1) -> o2.compareTo(o1));
+        nums.sort(Comparator.naturalOrder());
 
         ArrayDeque<Integer> digit = new ArrayDeque<>();
 

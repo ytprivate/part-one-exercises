@@ -5,6 +5,7 @@ import com.mycompany.aviation.planes.ExperimentalPlane;
 import com.mycompany.aviation.planes.MilitaryPlane;
 import com.mycompany.aviation.planes.PassengerPlane;
 import com.mycompany.aviation.planes.Plane;
+
 import java.util.*;
 
 public class Airport {
@@ -15,7 +16,7 @@ public class Airport {
         this.planes = planes;
     }
 
-    public List<PassengerPlane> getPassengerPlane() {
+    public List<PassengerPlane> getPassengerPlanes() {
         List<? extends Plane> planes = this.planes;
         List<PassengerPlane> passengerPlane = new ArrayList<>();
         for (Plane plane : planes) {
@@ -25,19 +26,19 @@ public class Airport {
         }
         return passengerPlane;
     }
+
     public List<MilitaryPlane> getMilitaryPlanes() {
         List<MilitaryPlane> militaryPlanes = new ArrayList<>();
         for (Plane plane : planes) {
             if (plane instanceof MilitaryPlane) {
                 militaryPlanes.add((MilitaryPlane) plane);
-            } else {
             }
         }
         return militaryPlanes;
     }
 
     public PassengerPlane getPassengerPlaneWithMaxPassengersCapacity() {
-        List<PassengerPlane> passengerPlanes = getPassengerPlane();
+        List<PassengerPlane> passengerPlanes = getPassengerPlanes();
         PassengerPlane planeWithMaxCapacity = passengerPlanes.get(0);
         for (PassengerPlane passengerPlane : passengerPlanes) {
             if (passengerPlane.getPassengersCapacity() > planeWithMaxCapacity.getPassengersCapacity()) {
@@ -109,14 +110,6 @@ public class Airport {
 
     public List<? extends Plane> getPlanes() {
         return planes;
-    }
-
-    private void print(Collection<? extends Plane> collection) {
-        Iterator<? extends Plane> iterator = collection.iterator();
-        while (iterator.hasNext()) {
-            Plane plane = iterator.next();
-            System.out.println(plane);
-        }
     }
 
     @Override

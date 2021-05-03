@@ -1,16 +1,20 @@
-package com.mycompany.collections;
+package com.mycompany.collections.option;
 
 import java.io.*;
 import java.util.*;
+
+//import static java.util.Objects.requireNonNull;
 
 public class FileReadWrite {
     public static void main(String[] args) throws IOException {
 
         ArrayList<String> text = new ArrayList<>();
-
+//        new File(".").getAbsolutePath();
+        System.out.println(new File(".").getAbsolutePath());
         try {
             Scanner sc = new Scanner(new File(
                     Objects.requireNonNull(FileReadWrite.class.getClassLoader().getResource("text.txt")).getPath()));
+//                    Objects.requireNonNull(FileReadWrite.class.getClassLoader().getResource("text.txt")).getPath()));
             while (sc.hasNext()) {
                 text.add(sc.nextLine());
             }
